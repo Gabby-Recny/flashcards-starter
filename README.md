@@ -10,7 +10,7 @@ goal of deepening understanding of TDD and test creation.
 ## Technologies
 * Javascript
 
-![Flashcards Demo](https://giphy.com/gifs/BjOD5yRJ6NHAYOcHxy)
+![Flashcards Game Demo](https://media.giphy.com/media/BjOD5yRJ6NHAYOcHxy/giphy.gif)
 
 ## Wanna play? 👨🏾‍💻 👩🏾‍💻
 * Clone the game into the terminal
