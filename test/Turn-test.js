@@ -3,17 +3,20 @@ const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', function() {
+  let card, turn;
+  beforeEach(function() {
+    card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+    turn = new Turn('userGuess', card);
+  })
   it('should instatiate a turn', function() {
     let turn = new Turn()
-
     expect(turn).to.be.an.instanceof(Turn)
   })
-  it('should have a guess and a card', function() {
-    let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+  it('should have a card', function() {
     expect(card).to.be.an.instanceof(Card);
-
-    let turn = new Turn('userGuess', card);
-    expect(turn.guess).to.equal('userGuess', card);
+  })
+  it.only('should have a guess', () => {
+    expect(turn.guess).to.equal('userGuess');
   })
   it('should show a guess', function() {
     let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
