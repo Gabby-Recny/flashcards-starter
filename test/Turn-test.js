@@ -3,7 +3,7 @@ const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', () => {
-  let card, turn;
+  let card, card2, turn;
   beforeEach(() => {
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
     turn = new Turn('userGuess', card);
@@ -25,11 +25,6 @@ describe('Turn', () => {
     expect(turn.returnCard()).to.equal(card);
   })
   it('should evalutate users guess', () => {
-    let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
-
-    let turn = new Turn('object', card);
-    expect(turn.evaluateGuess()).to.equal(true);
-
     let turn1 = new Turn('array', card);
     expect(turn1.evaluateGuess()).to.equal(false);
   })
