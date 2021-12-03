@@ -23,17 +23,17 @@ class Round {
       this.incorrectGuesses.push(this.currentCard.id)
       return this.turn.giveFeedback()
     } else {
-        return this.turn.giveFeedback()
+      return this.turn.giveFeedback()
     }
   }
   calculatePercentageCorrect() {
-    this.percentage = (this.incorrectGuesses.length /this.turnCount) * 100;
+    this.percentage = (this.incorrectGuesses.length / this.turnCount) * 100;
 
     return this.percentage
   }
   endRound() {
-    console.log(`** Round over! ** You answered ${this.percentage}% of the questions correctly!`)
-    return `** Round over! ** You answered ${this.percentage}% of the questions correctly!`
+    let announcement = `** Round over! ** You answered ${this.percentage}% of the questions correctly!`
+    return announcement
   }
 }
 
