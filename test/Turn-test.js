@@ -9,30 +9,22 @@ describe('Turn', function() {
     turn = new Turn('userGuess', card);
   })
   it('should instatiate a turn', function() {
-    let turn = new Turn()
+    turn = new Turn()
     expect(turn).to.be.an.instanceof(Turn)
   })
   it('should have a card', function() {
     expect(card).to.be.an.instanceof(Card);
   })
-  it.only('should have a guess', () => {
+  it('should have a guess', () => {
     expect(turn.guess).to.equal('userGuess');
   })
   it('should show a guess', function() {
-    let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
-
-    let turn = new Turn('userGuess', card);
-
     expect(turn.returnGuess()).to.equal('userGuess')
   })
   it('should show a card', function() {
-    let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
-
-    let turn = new Turn('userGuess', card);
-
     expect(turn.returnCard()).to.equal(card);
   })
-  it('should evalutate users guess', function() {
+  it.only('should evalutate users guess', function() {
     let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
 
     let turn = new Turn('object', card);
