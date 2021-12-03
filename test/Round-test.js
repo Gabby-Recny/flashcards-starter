@@ -44,11 +44,11 @@ describe('Round', () => {
   })
   it('should update current card to next card with each turn', () => {
     round.takeTurn()
-    expect(round.currentCard).to.equal(card1)
+    expect(round.currentCard).to.equal(deck.cards[1])
 
     round.takeTurn()
     round.takeTurn()
-    expect(round.currentCard).to.equal(card3)
+    expect(round.currentCard).to.equal(deck.cards[3])
   })
   it('should store incorrect guesses with an id', () => {
     round.takeTurn('sea otter')
