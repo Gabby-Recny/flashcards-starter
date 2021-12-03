@@ -39,12 +39,14 @@ describe('Turn', function() {
     expect(turn1.evaluateGuess()).to.equal(false);
   })
   it('should give feedback on guess', function() {
-    let card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+    let card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
 
-    let turn = new Turn('object', card);
+    let turn = new Turn('object', card1);
     expect(turn.giveFeedback()).to.equal('correct!');
 
-    let turn1 = new Turn('array', card);
+    card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+
+    let turn1 = new Turn('appendix', card2);
     expect(turn1.giveFeedback()).to.equal('incorrect!');
   })
 });
