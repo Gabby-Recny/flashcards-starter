@@ -15,7 +15,7 @@ describe('Round', () => {
 
     turn = new Turn(null, card1)
 
-    round = new Round(deck, turn);
+    round = new Round(deck);
   });
   it('should be a function', () => {
     expect(Round).to.be.a('function')
